@@ -1,0 +1,10 @@
+{% extends './layout.html' %}
+{% block content %}
+<ul class='list-group'>
+  {% for tweet in tweets %}
+    <li class='list-group-item'>
+      <a href='/tweets/{{ tweet.id }}'>{{ tweet.content }}</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}
