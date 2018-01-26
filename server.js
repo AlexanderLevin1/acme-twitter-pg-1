@@ -21,7 +21,6 @@ app.get('/', (req, res, next)=> {
 
 app.use('/tweets', require('./routes/tweets'));
 
-
 const port = process.env.PORT || 3000;
 
 app.listen(port, ()=> console.log(`listening on port ${port}`));
@@ -34,15 +33,5 @@ db.sync(function(err, result){
     if(err){
       return console.log(err);
     }
-    db.getTweets((err, tweets)=> {
-      if(err){
-        return console.log(err);
-      }
-      tweets.forEach( tweet => console.log(tweet));
-      db.getTweet(2, (err, tweet)=> {
-        if(err) return console.log(err);
-        console.log(tweet.content);
-      });
-    });
   });
 });

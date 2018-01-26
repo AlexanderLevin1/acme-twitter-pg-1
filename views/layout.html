@@ -22,16 +22,16 @@
       <pre>
       name your repo acme-twitter-pg
       files:
-        server.js
+        server.js (~30 lines of code)
           - sync and seed data and start server
           - set up static routes 
           - define '/' route and require tweets router 
-        routes/tweets.js
-        db/index.js
-          sync
-          seed
-          getTweets
-          getTweet
+        routes/tweets.js (~18 lines of code)
+        db/index.js (~40 lines of code)
+          sync - function which creates tables
+          seed - function which seeds data
+          getTweets - function which queries for all tweets
+          getTweet - function which queries for one tweet
         views/
           layout.html
           index.html
